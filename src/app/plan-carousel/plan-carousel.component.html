@@ -1,0 +1,68 @@
+<div class="carousel " #carousel>
+    <ul class="indicators">
+        <li *ngFor="let slide of [].constructor(slidesCount); let i = index" (click)="goToSlide(i)" [class.active]="i === activeIndex">
+          <span class="material-icons">lens</span>
+        </li>
+      </ul>
+    <button class="left-arrow" (click)="scrollLeft()">
+        <span class="material-icons">chevron_left</span>
+      </button>
+      <button class="right-arrow" (click)="scrollRight()">
+        <span class="material-icons">chevron_right</span>
+      </button>
+  <div class="slide">
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan1.jpg" alt="plan1" />
+    </div>
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan2.jpg" alt="plan2" />
+    </div>
+  </div>
+  <div class="slide">
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan3.jpg" alt="plan3" />
+    </div>
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan4.jpg" alt="plan4" />
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan5.jpg" alt="plan5" />
+    </div>
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan6.jpg" alt="plan6" />
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan7.jpg" alt="plan7" />
+    </div>
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan8.jpg" alt="plan8" />
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan9.jpg" alt="plan9" />
+    </div>
+    <div class="img-container">
+      <img
+        class="image"
+        src="../../assets/images/plan/plan10.jpg"
+        alt="plan10"
+      />
+    </div>
+  </div>
+  <div class="slide">
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan11.jpg" alt="plan11" />
+    </div>
+    <div class="img-container">
+      <img class="image" src="../../assets/images/plan/plan12.jpg" alt="plan12" />
+    </div>
+  </div>
+</div>

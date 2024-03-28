@@ -1,0 +1,95 @@
+.carousel{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: unset;
+
+}
+.slide{
+    min-width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // overflow: hidden;
+    // height: 450px;
+    // justify-content: center;
+    // display: flex;
+    // align-items: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .material-icons {
+    font-size: 48px; // Adjust size as needed
+    color: #333; // Adjust color as needed
+  }
+  .indicators {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    li {
+      cursor: pointer;
+      padding: 0 5px;
+    }
+  
+    .material-icons {
+      font-size: 12px; // Smaller dot icons
+      color: gray; // Default indicator color
+      transition: background-color 1s ease; /* Adjust based on your actual active indicator */
+
+    }
+  
+    li:hover .material-icons {
+      color: black; // Hover color
+      transition: background-color 1s ease; /* Adjust based on your actual active indicator */
+
+    }
+  }
+
+  .slide-indicator {
+  }
+  
+
+  .indicators li.active .material-icons {
+    color: black;
+  }
+  
+  @media (max-width: 1024px) {
+  
+    .slide{
+        grid-template-columns: 1fr;
+    }
+  }

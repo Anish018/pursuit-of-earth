@@ -1,0 +1,31 @@
+.contact-us {
+    width: 100%;
+  }
+  .form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .input,
+  .textarea {
+    padding: 14px 16px;
+    border: none;
+    font-size: 16px;
+    border: 0.5px solid rgba(0, 0, 0, 0.48);
+    border-radius: 6px;
+  }
+  .textarea {
+      height: 100px;
+  }
+  .submit-btn {
+    background-color: #ff6936;
+    padding: 14px 16px;
+    color: white;
+    border: none;
+    width: fit-content;
+    align-self: center;
+    justify-self: flex-end;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 10px;
+  }

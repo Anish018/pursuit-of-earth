@@ -1,0 +1,13 @@
+<div class="accordion">
+  <div *ngFor="let item of accordionItems; let i = index" class="accordion-item">
+    <div class="accordion-header" (click)="toggleItem(i)">
+      {{ item.header }}
+      <span class="toggle-icon">{{ isItemOpen(i) ? '−' : '+' }}</span>
+    </div>
+    <div *ngIf="isItemOpen(i)" class="accordion-content">
+      <ul>
+        <li *ngFor="let content of item.content">{{ content }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

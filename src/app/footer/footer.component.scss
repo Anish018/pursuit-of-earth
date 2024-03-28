@@ -1,0 +1,33 @@
+.section{
+    height: fit-content;
+    background-color: #025A4B;
+    min-height: unset;
+}
+.align{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    a{
+        color: white;
+
+    }
+}
+@media (max-width: 768px) {
+    .align{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .links{
+        gap: 20px;
+    }
+}

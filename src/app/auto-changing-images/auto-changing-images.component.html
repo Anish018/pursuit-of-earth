@@ -1,0 +1,9 @@
+<!-- auto-changing-images.component.html -->
+<div class="image-container">
+    <img
+      *ngFor="let image of images; let i = index"
+      [src]="image"
+      [ngClass]="{'hero-img': true, 'img-visible': currentImageIndex === i}"
+      alt="Hero image">
+  </div>
+  

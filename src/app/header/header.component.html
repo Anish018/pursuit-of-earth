@@ -1,0 +1,74 @@
+<header>
+    <a href="/" class="logo">
+      <img class="mob-main-logo" src="../../assets/logos/logohead.png" alt="logo" />
+    </a>
+    <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">☰</button>
+    <nav class="navigation" [class.active]="mobileMenuOpen">
+      <ul class="nav-list">
+        <!-- <div class="mob-logo-div">
+          <img
+            class="mob-logo"
+            src="../../assets/logos/logo.png"
+            alt=""
+          />
+        </div> -->
+  
+        <li>
+          <a
+            [class.active-link]="isActive('s1')"
+            href="#"
+            (click)="scrollToSection('s1', $event)"
+            >HOME </a
+          >
+        </li>
+        <li>
+          <a
+          [class.active-link]="isActive('s2')"
+          href="#"
+          (click)="scrollToSection('s2', $event)"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            [class.active-link]="isActive('s3')"
+            href="#"
+            (click)="scrollToSection('s3', $event)"
+            >FLOOR PLANS</a
+          >
+        </li>
+        <li>
+          <a
+            [class.active-link]="isActive('s5')"
+            href="#"
+            (click)="scrollToSection('s5', $event)"
+            >AMENITIES</a
+          >
+        </li>
+  
+        <li>
+          <a
+            [class.active-link]="isActive('s7')"
+            (click)="scrollToSection('s7', $event)"
+            >CONTACT US </a
+          >
+        </li>
+        <li>
+            <a href="">
+                <img class="fb" src="../../assets/icons/facebook.svg" alt="facebook">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img class="ig" src="../../assets/icons/instagram.svg" alt="instagram">
+            </a>
+        </li>
+        <!-- <button class="mob-book-btn">Book a visit</button> -->
+        <button class="close-menu-btn" (click)="closeMobileMenu()">
+          <i class="material-icons">close</i>
+        </button>
+      </ul>
+    </nav>
+    <!-- <button class="desk-book-btn">Book a visit</button> -->
+  
+  </header>
