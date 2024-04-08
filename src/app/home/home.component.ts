@@ -1,5 +1,6 @@
 // home.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { PlanCarouselComponent } from '../plan-carousel/plan-carousel.component';
@@ -26,15 +27,21 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+
+  constructor(
+    private titleService: Title, 
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object // Inject PLATFORM_ID
+  ) {}
+
   ngOnInit() {
-    // Set page title
-    this.titleService.setTitle('Pursuit Of Earth | Find you Comfort homes with us');
-  
-    // Set meta description
-    this.metaService.updateTag({
-      name: 'Pursuit Of Earth | Find you Comfort homes with us',
-      content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      // Now, this code will only run on the browser
+      this.titleService.setTitle('Pursuit Of Earth | Find your Comfort homes with us');
+      this.metaService.updateTag({
+        name: 'description',
+        content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
+      });
   
     // Set Open Graph (OG) meta tags
     this.metaService.updateTag({
@@ -48,10 +55,9 @@ export class HomeComponent {
     this.metaService.updateTag({
       property: 'og:image',
       content: window.location.protocol + '//' + window.location.host + '/favicon.ico'
-    });    
+    });
   }
-  
-  constructor(private titleService: Title, private metaService: Meta) {}
+}
 
   masterPlan: string[] = [
     'Driveway',
