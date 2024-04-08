@@ -1,5 +1,5 @@
 // home.component.ts
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { PlanCarouselComponent } from '../plan-carousel/plan-carousel.component';
@@ -7,6 +7,8 @@ import { AccordionComponent } from '../accordion/accordion.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AutoChangingImagesComponent } from '../auto-changing-images/auto-changing-images.component';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -24,6 +26,33 @@ import { AutoChangingImagesComponent } from '../auto-changing-images/auto-changi
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  ngOnInit() {
+    // Set page title
+    this.titleService.setTitle('Pursuit Of Earth | Find you Comfort homes with us');
+  
+    // Set meta description
+    this.metaService.updateTag({
+      name: 'Pursuit Of Earth | Find you Comfort homes with us',
+      content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
+    });
+  
+    // Set Open Graph (OG) meta tags
+    this.metaService.updateTag({
+      property: 'og:title',
+      content: 'Pursuit Of Earth | Find you Comfort homes with us'
+    });
+    this.metaService.updateTag({
+      property: 'og:description',
+      content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
+    });
+    this.metaService.updateTag({
+      property: 'og:image',
+      content: window.location.protocol + '//' + window.location.host + '/favicon.ico'
+    });    
+  }
+  
+  constructor(private titleService: Title, private metaService: Meta) {}
+
   masterPlan: string[] = [
     'Driveway',
     'Driveway Island',
@@ -102,4 +131,25 @@ export class HomeComponent {
       title: 'Senior Zone',
     },
   ];
+
+    // Other component properties and methods
+
+    scrollTo(sectionId: string): void {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        // Calculate the position to scroll to, considering the desired offset
+        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+        const offset = 100; // Desired offset from the top in pixels
+        const scrollToPosition = sectionTop - offset;
+    
+        // Scroll to the calculated position smoothly
+        window.scrollTo({
+          top: scrollToPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+    
+    
+    
 }

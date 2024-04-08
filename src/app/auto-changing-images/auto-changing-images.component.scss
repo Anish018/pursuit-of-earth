@@ -1,5 +1,5 @@
 .hero-img {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -8,9 +8,16 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
-  
 
   .img-visible {
     opacity: 1;
   }
+
+  @media (max-width: 768px) {
+    .hero-img {
+      position: absolute;
+    }
+    
+  }
+
 

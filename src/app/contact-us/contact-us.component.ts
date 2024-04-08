@@ -23,7 +23,7 @@ export class ContactUsComponent {
     this.isSending = true;
 
     // Here you need to add your service ID, template ID, and user ID
-    emailjs.sendForm('service_zfmxvya', 'template_tp47laj', event.target as HTMLFormElement, '6-QdLjlzl5V_YnnGJ')
+    emailjs.sendForm('service_zfmxvya', 'template_5m47dbm', event.target as HTMLFormElement, '6-QdLjlzl5V_YnnGJ')
       .then((response: EmailJSResponseStatus) => {
         // console.log('SUCCESS!', response.status, response.text);
         this.router.navigate(['/thankyou']);

@@ -76,3 +76,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
  .accordion-button {
     background-color: transparent !important;
   }
+  .s2, .s3, .s4, .s5, .s6, .s7, app-footer {
+    position: relative;
+    background-color: white;
+    z-index: 20;
+  } 

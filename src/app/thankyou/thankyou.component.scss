@@ -1,0 +1,21 @@
+.thankyou{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+button{
+    background-color: #025a4b;
+    color: white;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+}

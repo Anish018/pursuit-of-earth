@@ -13,6 +13,14 @@
     padding: 20px;
 
 }
+.img-container{
+    
+}
+img{
+    max-width: 200px;
+    height: 100%;
+    object-fit: contain;
+}
 .links{
     display: flex;
     justify-content: center;
@@ -29,5 +37,8 @@
     }
     .links{
         gap: 20px;
+    }
+    img{
+        max-width: 100px;
     }
 }
