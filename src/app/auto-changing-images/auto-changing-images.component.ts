@@ -10,11 +10,21 @@ import { CommonModule } from '@angular/common';
   templateUrl: './auto-changing-images.component.html',
   styleUrl: './auto-changing-images.component.scss'
 })
-export class AutoChangingImagesComponent  implements OnInit, OnDestroy {
+export class AutoChangingImagesComponent implements OnInit, OnDestroy {
   images: string[] = [
     '../../assets/images/hero-bg1.jpg',
     '../../assets/images/hero-bg2.jpg',
     '../../assets/images/hero-bg3.jpg',
+  ];
+  heroTexts: string[] = [
+    "One of a kind Eco Luxury Living",
+    "Everything within reach",
+    "Built amidst Nature"
+  ];
+  smallHeroTexts: string[] = [
+    "Innovation",
+    "Location",
+    "Biophilic"
   ];
   currentImageIndex = 0;
   private imgChangeSub?: Subscription;
@@ -34,5 +44,6 @@ export class AutoChangingImagesComponent  implements OnInit, OnDestroy {
     this.imgChangeSub?.unsubscribe();
   }
 }
+
 
 

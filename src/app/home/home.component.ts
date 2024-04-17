@@ -11,6 +11,7 @@ import { AutoChangingImagesComponent } from '../auto-changing-images/auto-changi
 import { Title, Meta } from '@angular/platform-browser';
 
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -21,7 +22,7 @@ import { Title, Meta } from '@angular/platform-browser';
     AccordionComponent,
     ContactUsComponent,
     FooterComponent,
-    AutoChangingImagesComponent
+    AutoChangingImagesComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -106,7 +107,7 @@ export class HomeComponent {
   amenities = [
     {
       icon: 'forrest.png',
-      title: 'Forrest',
+      title: 'Forest',
     },
     {
       icon: 'sensory.png',

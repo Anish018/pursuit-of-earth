@@ -1,9 +1,26 @@
-<!-- auto-changing-images.component.html -->
 <div class="image-container">
-    <img
-      *ngFor="let image of images; let i = index"
-      [src]="image"
-      [ngClass]="{'hero-img': true, 'img-visible': currentImageIndex === i}"
-      alt="Hero image">
+  <img *ngFor="let image of images; let i = index"
+       [src]="image"
+       [class.hero-img]="true"
+       [class.img-visible]="currentImageIndex === i"
+       alt="Hero image">
+</div>
+<div class="content">
+  <div class="left">
+    <img class="logo" src="../../assets/logos/poelogo-white.png" alt="logo" />
   </div>
   
+  <div class="right">
+  <div class="small-hero-text-container">
+    <h3 *ngFor="let text of smallHeroTexts; let i = index"
+        [class.small-hero-text]="true"
+        [class.active]="currentImageIndex === i">{{ text }}</h3>
+  </div>
+  
+  <div class="hero-text-container">
+    <h2 *ngFor="let text of heroTexts; let i = index"
+        [class.hero-text]="true"
+        [class.active]="currentImageIndex === i">{{ text }}</h2>
+  </div>
+  </div>
+</div>

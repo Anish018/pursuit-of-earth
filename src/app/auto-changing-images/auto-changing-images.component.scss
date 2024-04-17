@@ -1,23 +1,144 @@
 .hero-img {
-    position: fixed;
-    top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.right {
+  position: relative;
+  padding: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
     left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transform: translateX(50%);
+    height: 100vh;
+    width: 0.5px;
+    background-color: rgba(255, 255, 255, 0.843);
   }
+}
 
-  .img-visible {
-    opacity: 1;
-  }
+.logo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img-visible {
+  opacity: 1;
+}
+.hero-text-container {
+  position: relative; /* Positioning text over the image */
+  width: 90%;
+
+
+  color: #fff; /* Ensure text color is visible against a potentially dark background */
+  font-size: 2rem; /* Adjust size as needed */
+}
+.small-hero-text-container {
+  position: relative; /* Anchors the container to a specific position */
+
+  
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.small-hero-text {
+  position: relative;
+  width: 100%; /* Ensure it spans the full width of its container */
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: none;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.small-hero-text.active {
+  opacity: 1;
+  display: block;
+  transition: opacity 1s ease-in-out;
+}
+
+.content {
+  margin-right: -10px;
+  left: -10px;
+  z-index: 10;
+  padding: 20px;
+  background-color: rgb(5 35 68 / 68%);
+  max-width: 900px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+.hero-text {
+  position: relative;
+  width: 100%;         /* Ensure text spans the full width of the container */
+  font-size: 60px;
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0;          /* Start as invisible */
+  transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+  display: none;
+
+}
+
+.active {
+  opacity: 1; /* Make text visible when it's the active slide */
+  display: block;
+}
+
+
 
   @media (max-width: 768px) {
     .hero-img {
       position: absolute;
     }
+    .logo {
+      width: 200px;
+      height: 100%;
+    }
+    .left {
+      width: 100%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+      &::before {
+        display: none;
+      }
+    }
+    .content {
+      box-sizing: border-box;
+      width: 90%;
+      padding-left: 10%;
+      padding-right: 10%;
+      grid-template-columns: 1fr;
+      gap: 60px;  
+    }
     
   }
 
+
+  @media (max-width: 480px) {
+      .logo {
+        width: 200px;
+        height: 100%;
+      }
+      .hero-text {
+        font-size: 40px;
+      }
+    }
 
