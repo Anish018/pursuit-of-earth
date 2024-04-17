@@ -39,7 +39,7 @@
   position: relative;
   width: 95%;
   color: #fff;
-  height: 100px;  /* Fixed height to ensure text elements have the same space */
+  height: 80px;  /* Fixed height to ensure text elements have the same space */
 }
 
 .hero-text, .small-hero-text {
@@ -87,7 +87,7 @@
 
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     .hero-img {
       position: absolute;
     }
@@ -107,7 +107,7 @@
     }
     .hero-text{
       font-size: 48px;
-      
+      line-height: 50px;
     }
     .hero-text-container{
       width: 350px;
