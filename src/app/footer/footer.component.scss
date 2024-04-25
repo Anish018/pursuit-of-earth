@@ -16,6 +16,16 @@
 .img-container{
     
 }
+.footer-btm{
+    text-align: center;
+    p{
+        color: white;
+    }
+}
+.footer-top{
+    display: flex;
+    gap: 100px;
+}
 img{
     max-width: 200px;
     height: 100%;
@@ -24,7 +34,8 @@ img{
 .links{
     display: flex;
     justify-content: center;
-    gap: 100px;
+    flex-direction: column;
+    gap: 35px;
     a{
         color: white;
 
@@ -36,6 +47,9 @@ img{
         gap: 20px;
     }
     .links{
+        gap: 20px;
+    }
+    .footer-top{
         gap: 20px;
     }
     img{
