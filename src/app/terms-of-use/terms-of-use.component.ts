@@ -20,24 +20,24 @@ export class TermsOfUseComponent {
 
   ngOnInit() {
     // Set page title
-    this.titleService.setTitle('Pursuit Of Earth | Terms of Use');
+    this.titleService.setTitle('The Earth Sounds | Terms of Use');
 
     // Set meta description
     this.metaService.updateTag({
-      name: 'Pursuit Of Earth | Terms of Use',
+      name: 'The Earth Sounds | Terms of Use',
       content:
-        'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!',
+        'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!',
     });
 
     // Set Open Graph (OG) meta tags
     this.metaService.updateTag({
       property: 'og:title',
-      content: 'Pursuit Of Earth | Terms of Use',
+      content: 'The Earth Sounds | Terms of Use',
     });
     this.metaService.updateTag({
       property: 'og:description',
       content:
-        'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!',
+        'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!',
     });
     this.metaService.updateTag({
       property: 'og:image',

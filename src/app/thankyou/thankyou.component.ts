@@ -21,22 +21,22 @@ export class ThankyouComponent {
 
   ngOnInit() {
     // Set page title
-    this.titleService.setTitle('Pursuit Of Earth | Privacy Policy');
+    this.titleService.setTitle('The Earth Sounds | Privacy Policy');
   
     // Set meta description
     this.metaService.updateTag({
-      name: 'Pursuit Of Earth | Thankyou',
-      content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
+      name: 'The Earth Sounds | Thankyou',
+      content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
     });
   
     // Set Open Graph (OG) meta tags
     this.metaService.updateTag({
       property: 'og:title',
-      content: 'Pursuit Of Earth | Thankyou'
+      content: 'The Earth Sounds | Thankyou'
     });
     this.metaService.updateTag({
       property: 'og:description',
-      content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
+      content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
     });
     this.metaService.updateTag({
       property: 'og:image',

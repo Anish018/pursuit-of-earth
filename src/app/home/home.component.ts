@@ -32,33 +32,23 @@ export class HomeComponent {
   constructor(
     private titleService: Title, 
     private metaService: Meta,
-    @Inject(PLATFORM_ID) private platformId: Object // Inject PLATFORM_ID
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      // Now, this code will only run on the browser
-      this.titleService.setTitle('Pursuit Of Earth | Find your Comfort homes with us');
-      this.metaService.updateTag({
-        name: 'description',
-        content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
-      });
-  
+    // Set page title and meta descriptions
+    this.titleService.setTitle('The Earth Sounds | Find your Comfort homes with us');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
+    });
+
     // Set Open Graph (OG) meta tags
-    this.metaService.updateTag({
-      property: 'og:title',
-      content: 'Pursuit Of Earth | Find you Comfort homes with us'
-    });
-    this.metaService.updateTag({
-      property: 'og:description',
-      content: 'Get the best deals on your dream home with Pursuit Of Earth. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
-    });
-    this.metaService.updateTag({
-      property: 'og:image',
-      content: window.location.protocol + '//' + window.location.host + '/favicon.ico'
-    });
+    this.metaService.updateTag({ property: 'og:title', content: 'The Earth Sounds | Find your Comfort homes with us' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.theearthsounds.com/assets/images/favicon.jpg' }); // Use a more appropriate OG image
   }
-}
+
 
   masterPlan: string[] = [
     'Driveway',
