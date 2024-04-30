@@ -44,7 +44,7 @@ export class HomeComponent {
     });
 
     // Set Open Graph (OG) meta tags
-    this.metaService.updateTag({ property: 'og:title', content: 'The Earth Sounds | Find your Comfort homes with us' });
+    this.metaService.updateTag({ property: 'og:title', content: 'The Earth Sounds | Eco-luxury Residences' });
     this.metaService.updateTag({ property: 'og:description', content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!' });
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.theearthsounds.com/assets/images/favicon.jpg' }); // Use a more appropriate OG image
   }
