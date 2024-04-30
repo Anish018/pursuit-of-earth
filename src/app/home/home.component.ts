@@ -37,7 +37,7 @@ export class HomeComponent {
 
   ngOnInit() {
     // Set page title and meta descriptions
-    this.titleService.setTitle('The Earth Sounds | Find your Comfort homes with us');
+    this.titleService.setTitle('The Earth Sounds | Eco-luxury Residences');
     this.metaService.updateTag({
       name: 'description',
       content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!'
