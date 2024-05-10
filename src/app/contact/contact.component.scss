@@ -1,0 +1,24 @@
+.contact{
+    height: fit-content;
+    padding: 100px 0 50px;
+    .title{
+        margin-bottom: 30px;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .map{
+
+    }
+}
+
+@media (max-width: 768px) {
+    .contact{
+        height: fit-content;
+        .content{
+            grid-template-columns: 1fr;
+        }
+    }
+}
