@@ -15,7 +15,7 @@
         a story of nature's revival. Situated at the heart of Varthur Main Road,
         these eco-luxury residences are the epitome of nature-infused luxury!
       </p>
-      <a href="/contact-us" class="contact-btn">Contact</a>
+      <a href="/contact-us" class="contact-btn">Get Quote</a>
 
     </div>
     <div class="right">
@@ -25,26 +25,6 @@
 </section>
 
 <section class="section s3" id="s3">
-  <div class="align">
-    <h1 class="page-title">Proposed Floor Plans</h1>
-    <app-plan-carousel />
-  </div>
-</section>
-<section class="section s4" id="s4">
-  <div class="align">
-    <h1 class="title">Proposed Master Plans</h1>
-    <img
-      class="master-plan-img"
-      src="../../assets/images/master_plan.png"
-      alt="master plan"
-    />
-    <p class="list-title">LEGEND</p>
-    <ol>
-      <li *ngFor="let item of masterPlan">{{ item }}</li>
-    </ol>
-  </div>
-</section>
-<section class="section s5" id="s5">
   <div class="align">
     <h1 class="title">Amenities</h1>
     <p class="desc">
@@ -63,6 +43,26 @@
         <p class="tile-title">{{ item.title }}</p>
       </div>
     </div>
+  </div>
+</section>
+<section class="section s5" id="s5">
+  <div class="align">
+    <h1 class="page-title">Proposed Floor Plans</h1>
+    <app-plan-carousel />
+  </div>
+</section>
+<section class="section s4" id="s4">
+  <div class="align">
+    <h1 class="title">Proposed Master Plans</h1>
+    <img
+      class="master-plan-img"
+      src="../../assets/images/master_plan.png"
+      alt="master plan"
+    />
+    <p class="list-title">LEGEND</p>
+    <ol>
+      <li *ngFor="let item of masterPlan">{{ item }}</li>
+    </ol>
   </div>
 </section>
 <section class="section s6" id="s6">
