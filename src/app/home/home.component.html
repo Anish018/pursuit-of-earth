@@ -1,11 +1,13 @@
 <!-- home.component.html -->
 <app-header />
+<button class="quote-btn" (click)="openContactModal()">Get Quote</button>
 <section class="section s1" id="s1">
   <app-auto-changing-images></app-auto-changing-images>
 
 </section>
 
 <section class="section s2" id="s2">
+  
   <div class="align">
     <div class="left">
       <h1 class="title">Luxury in every detail</h1>
@@ -15,7 +17,7 @@
         a story of nature's revival. Situated at the heart of Varthur Main Road,
         these eco-luxury residences are the epitome of nature-infused luxury!
       </p>
-      <a href="/contact-us" class="contact-btn">Get Quote</a>
+      <button class="contact-btn" (click)="openContactModal()">Get Quote</button>
 
     </div>
     <div class="right">
@@ -24,7 +26,7 @@
   </div>
 </section>
 
-<section class="section s3" id="s3">
+<section class="section s3" id="s3" #section3>
   <div class="align">
     <h1 class="title">Amenities</h1>
     <p class="desc">
@@ -45,13 +47,7 @@
     </div>
   </div>
 </section>
-<section class="section s5" id="s5">
-  <div class="align">
-    <h1 class="page-title">Proposed Floor Plans</h1>
-    <app-plan-carousel />
-  </div>
-</section>
-<section class="section s4" id="s4">
+<section class="section s4" id="s4" #section4>
   <div class="align">
     <h1 class="title">Proposed Master Plans</h1>
     <img
@@ -65,7 +61,13 @@
     </ol>
   </div>
 </section>
-<section class="section s6" id="s6">
+<section class="section s5" id="s5">
+  <div class="align">
+    <h1 class="page-title">Proposed Floor Plans</h1>
+    <app-plan-carousel />
+  </div>
+</section>
+<section class="section s6" id="s6" #section6>
   <div class="align">
     <h1 class="title">Ultimate Convenience</h1>
     <p class="desc">
@@ -104,4 +106,5 @@
     </div>
   </div>
 </section>
+
 <app-footer />

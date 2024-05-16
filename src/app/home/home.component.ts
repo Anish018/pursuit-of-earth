@@ -1,5 +1,5 @@
 // home.component.ts
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, HostListener, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
@@ -9,6 +9,7 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AutoChangingImagesComponent } from '../auto-changing-images/auto-changing-images.component';
 import { Title, Meta } from '@angular/platform-browser';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -23,13 +24,16 @@ import { Title, Meta } from '@angular/platform-browser';
     ContactUsComponent,
     FooterComponent,
     AutoChangingImagesComponent,
+    MatDialogModule
+    
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
+export class HomeComponent implements OnInit {
+  private hasModalBeenOpened = false;
   constructor(
+    private dialog: MatDialog,
     private titleService: Title, 
     private metaService: Meta,
     @Inject(PLATFORM_ID) private platformId: Object
@@ -48,6 +52,44 @@ export class HomeComponent {
     this.metaService.updateTag({ property: 'og:description', content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!' });
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.theearthsounds.com/assets/images/favicon.jpg' }); // Use a more appropriate OG image
   }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(): void {
+    const section6 = document.getElementById('s6');
+    if (section6) {
+      const sectionTop = section6.getBoundingClientRect().top;
+      const scrollPosition = window.pageYOffset + window.innerHeight;
+  
+      // Check if section 4 is visible and the modal has not been opened yet
+      if (sectionTop <= scrollPosition && !this.hasModalBeenOpened) {
+        this.openContactUsModal();
+      }
+    }
+  }
+  
+  
+
+  openContactUsModal(): void {
+    if (!this.hasModalBeenOpened) {
+      this.dialog.open(ContactUsComponent, {
+        width: '300px',
+        data: { isModal: true },
+        position: { bottom: '0px', right: '0px' },
+        panelClass: ['custom-dialog-container', 'custom-overlay-pane']
+      });
+      
+      this.hasModalBeenOpened = true;  // Set the flag to true after opening the modal
+    }
+  }
+
+  openContactModal():void{
+    this.dialog.open(ContactUsComponent, {
+      width: '300px',
+      data: { isModal: true },
+      position: { bottom: '0px', right: '0px' },
+      panelClass: ['custom-dialog-container', 'custom-overlay-pane']
+    });
+  }
+    
 
 
   masterPlan: string[] = [

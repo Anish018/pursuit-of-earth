@@ -1,4 +1,15 @@
 
+.quote-btn{
+  background-color: #0e234f;
+  border-radius: 25px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1100;
+  color: white;
+  padding: 10px;
+  border: none;
+}
 .s1 {
   position: relative;
   color: white;
@@ -78,6 +89,7 @@
   }
 }
 .s2 {
+  
   height: fit-content;
   position: relative;
   z-index: 10;
@@ -314,7 +326,11 @@
     }
   }
   .s2 {
-
+    .contact-btn{
+    width: 115px;
+    display: block; /* Ensures the button is on a new line if flex or grid issues are present */
+    overflow: visible; /* Makes sure all parts of the button are visible */
+    }
     .right {
       top: 0;
     }
@@ -331,7 +347,7 @@
       column-count: 2;
     }
   }
-  .s5 {
+  .s3 {
     height: fit-content;
     margin-bottom: 100px;
     .tile-img-container {
@@ -392,7 +408,7 @@
       font-size: 40px;
     }
   }
-  .s5{
+  .s3{
         .tile{
             padding: 20px;
         }

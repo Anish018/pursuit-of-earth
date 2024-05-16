@@ -68,6 +68,41 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
 
+.custom-dialog-container {
+  position: fixed; /* Important to keep it positioned correctly */
+  bottom: 0;
+  right: 0;
+  pointer-events: none; 
+}
+
+
+/* Ensures the dialog starts off-screen */
+.custom-dialog-enter {
+  transform: translateY(100%);
+}
+
+.custom-dialog-container.mat-dialog-container {
+  position: fixed;
+  bottom: 0;  // Align with the bottom
+  right: 0;   // Align with the right
+  overflow-y: visible;
+}
+
+.cdk-overlay-backdrop {
+  background-color: transparent !important;  // Make the backdrop transparent
+  pointer-events: none !important;          // Allow clicks to pass through
+}
+
+.custom-overlay-pane {
+  pointer-events: none; /* Allows clicking and scrolling through */
+}
+
+.custom-overlay-pane.cdk-overlay-backdrop {
+  pointer-events: none;
+}
+
+
+
 .accordion-item {
     background: transparent !important;
     border: 0;
@@ -81,3 +116,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: white;
     z-index: 20;
   } 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
