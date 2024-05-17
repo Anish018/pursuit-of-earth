@@ -35,9 +35,48 @@
     <meta property="og:image" content="https://www.theearthsounds.com/assets/images/favicon.jpg" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="600" /> 
+
+    
   
 </head>
   <body>
+    <script>
+      var url = 'https://kwiqreply.io/integrations/whatsapp-chat-window-widget-kwiqreply.js?87242';
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = url;
+      var options = {
+                "enabled":true,
+                "chatButtonSetting":{
+                    "backgroundColor":"#0fcc1c",
+                    "ctaText":"Contact Us",
+                    "borderRadius":"25",
+                    "marginLeft":"0",
+                    "marginBottom":"65",
+                    "marginRight":"20",
+                    "position":"right"
+                },
+                "brandSetting":{
+                    "brandName":"Saikam Aananda",
+                    "brandSubTitle":"Official WhatsApp Account",
+                    "brandImg":"https://kwiqreply.blob.core.windows.net/kwiqreply/EMD5wTj9ectBGMSaSeGXXnqNKejh5U/incoming/image/image_1715849336.jpeg",
+                    "welcomeText":" Hi there!\n How can I help you?",
+                    "messageText":"Hi, I want to know more about Earth Sounds",
+                    "backgroundColor":"#0fcc1c",
+                    "ctaText":"Start Chat",
+                    "borderRadius":"25",
+                    "autoShow":false,
+                    "phoneNumber":"918951054655"
+                }
+              };
+      s.onload = function() {
+        CreateWhatsappChatWidget(options);
+      };
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+  </script>
+  
     <app-root></app-root>
   </body>
 </html>

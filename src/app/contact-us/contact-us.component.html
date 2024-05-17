@@ -7,7 +7,7 @@
     <input class="input" type="tel" name="user_phone" placeholder="YOUR PHONE NO" required />
     <input class="input" type="email" name="user_email" placeholder="YOUR EMAIL" required />
     <textarea class="textarea" name="message" placeholder="ENTER YOUR MESSAGE HERE" required></textarea>
-    <button type="submit" class="submit-btn" [disabled]="isSending">{{ isSending ? 'SENDING...' : 'Get Quote' }}</button>
+    <button type="submit" class="submit-btn" [disabled]="isSending" (click)="closeModal()">{{ isSending ? 'SENDING...' : 'Get Quote' }}</button>
 </form>
 
       

@@ -45,7 +45,6 @@ $pursuit-of-earth-theme: mat.define-light-theme((
 .section{
     height: 100vh;
     min-height: 600px;
-
 }
 .align{
     width: 80%;
@@ -55,6 +54,10 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Vidaloka", serif;
     font-weight: 400;
     font-style: normal;
+}
+#whatsapp_chat_widget{
+  position: relative;
+  z-index: 100 !important;
 }
 p, div{
     font-family: "Roboto", sans-serif;
@@ -72,13 +75,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   position: fixed; /* Important to keep it positioned correctly */
   bottom: 0;
   right: 0;
-  pointer-events: none; 
+  pointer-events: auto; 
+}
+
+body.modal-open, body {
+  overflow: visible !important;
+  position: initial !important;
 }
 
 
 /* Ensures the dialog starts off-screen */
 .custom-dialog-enter {
   transform: translateY(100%);
+  pointer-events: auto;
+ 
 }
 
 .custom-dialog-container.mat-dialog-container {
@@ -99,6 +109,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .custom-overlay-pane.cdk-overlay-backdrop {
   pointer-events: none;
+}
+.custom-scroll {
+  overflow: auto !important;
+}
+body.custom-scroll {
+  overflow: auto !important;
+  position: unset !important;
+}
+body.cdk-global-scrollblock {
+  overflow: auto !important;
 }
 
 
