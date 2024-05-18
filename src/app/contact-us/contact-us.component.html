@@ -4,10 +4,10 @@
   </button>
   <form (submit)="sendEmail($event)" class="form" [ngClass]="{'form-padding': isModal}">
     <input class="input" type="text" name="user_name" placeholder="NAME" required />
-    <input class="input" type="tel" name="user_phone" placeholder="YOUR PHONE NO" required />
-    <input class="input" type="email" name="user_email" placeholder="YOUR EMAIL" required />
+    <input class="input" type="tel" name="user_phone" placeholder="YOUR PHONE NO" required (input)="validateNumber($event)"/>
+    <input class="input" type="email" name="user_email" ngModel email="true" placeholder="YOUR EMAIL" required >
     <textarea class="textarea" name="message" placeholder="ENTER YOUR MESSAGE HERE" required></textarea>
-    <button type="submit" class="submit-btn" [disabled]="isSending" (click)="closeModal()">{{ isSending ? 'SENDING...' : 'Get Quote' }}</button>
+    <button type="submit" class="submit-btn" onclick="validateEmail()" [disabled]="isSending" (click)="closeModal()">{{ isSending ? 'SENDING...' : 'Get Quote' }}</button>
 </form>
 
       

@@ -65,60 +65,28 @@ p, div{
     line-height: 2;
     font-style: normal;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* General styles and imports */
+html, body {
+    height: 100%;
+    overflow: auto !important; /* Always allow scrolling */
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
-
-.custom-dialog-container {
-  position: fixed; /* Important to keep it positioned correctly */
-  bottom: 0;
-  right: 0;
-  pointer-events: auto; 
+/* Custom dialog container and overlay pane */
+.custom-dialog-container, .custom-overlay-pane {
+    pointer-events: auto; /* Make sure modal content is interactive */
+    position: fixed; /* Keep modal positioned */
+    bottom: 0;
+    right: 0;
 }
 
-body.modal-open, body {
-  overflow: visible !important;
-  position: initial !important;
-}
-
-
-/* Ensures the dialog starts off-screen */
-.custom-dialog-enter {
-  transform: translateY(100%);
-  pointer-events: auto;
- 
-}
-
-.custom-dialog-container.mat-dialog-container {
-  position: fixed;
-  bottom: 0;  // Align with the bottom
-  right: 0;   // Align with the right
-  overflow-y: visible;
-}
-
+/* Ensure the overlay does not block interaction with the background */
 .cdk-overlay-backdrop {
-  background-color: transparent !important;  // Make the backdrop transparent
-  pointer-events: none !important;          // Allow clicks to pass through
-}
-
-.custom-overlay-pane {
-  pointer-events: none; /* Allows clicking and scrolling through */
-}
-
-.custom-overlay-pane.cdk-overlay-backdrop {
-  pointer-events: none;
-}
-.custom-scroll {
-  overflow: auto !important;
-}
-body.custom-scroll {
-  overflow: auto !important;
-  position: unset !important;
-}
-body.cdk-global-scrollblock {
-  overflow: auto !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
 }
 
 

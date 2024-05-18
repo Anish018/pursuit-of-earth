@@ -84,21 +84,16 @@ export class HomeComponent implements OnInit {
   // }
 
   openContactModal(): void {
-    // Force scroll on body
-    document.body.style.overflow = 'auto';
-  
     const dialogRef = this.dialog.open(ContactUsComponent, {
       width: '300px',
       data: { isModal: true },
       position: { bottom: '0px', right: '0px' },
       panelClass: ['custom-dialog-container', 'custom-overlay-pane'],
     });
-  
-    dialogRef.afterClosed().subscribe(() => {
-      // Reset overflow when modal closes
-      document.body.style.overflow = 'hidden';
-    });
-  }
+
+    // No need to adjust body.style.overflow here
+}
+
   
   
     

@@ -38,7 +38,10 @@ closeModal(): void {
   }
 }
 
-  
+validateNumber(event: any): void {
+  const numericValue = event.target.value.replace(/[^0-9]/g, '');
+  event.target.value = numericValue.substring(0, 10);
+}
   
 
   sendEmail(event: Event) {
