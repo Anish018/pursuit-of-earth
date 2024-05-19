@@ -54,34 +54,7 @@ export class HomeComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:description', content: 'Get the best deals on your dream home with The Earth Sounds. We offer a wide range of residential properties in Bangalore. Book your dream home now!' });
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.theearthsounds.com/assets/images/favicon.jpg' }); // Use a more appropriate OG image
   }
-  // @HostListener('window:scroll', ['$event'])
-  // onWindowScroll(): void {
-  //   const section6 = document.getElementById('s6');
-  //   if (section6) {
-  //     const sectionTop = section6.getBoundingClientRect().top;
-  //     const scrollPosition = window.pageYOffset + window.innerHeight;
   
-  //     // Check if section 4 is visible and the modal has not been opened yet
-  //     if (sectionTop <= scrollPosition && !this.hasModalBeenOpened) {
-  //       this.openContactUsModal();
-  //     }
-  //   }
-  // }
-  
-  
-
-  // openContactUsModal(): void {
-  //   if (!this.hasModalBeenOpened) {
-  //     this.dialog.open(ContactUsComponent, {
-  //       width: '300px',
-  //       data: { isModal: true },
-  //       position: { bottom: '0px', right: '0px' },
-  //       panelClass: ['custom-dialog-container', 'custom-overlay-pane']
-  //     });
-      
-  //     this.hasModalBeenOpened = true;  // Set the flag to true after opening the modal
-  //   }
-  // }
 
   openContactModal(): void {
     const dialogRef = this.dialog.open(ContactUsComponent, {
@@ -90,13 +63,8 @@ export class HomeComponent implements OnInit {
       position: { bottom: '0px', right: '0px' },
       panelClass: ['custom-dialog-container', 'custom-overlay-pane'],
     });
-
     // No need to adjust body.style.overflow here
 }
-
-  
-  
-    
 
 
   masterPlan: string[] = [

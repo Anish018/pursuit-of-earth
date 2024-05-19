@@ -68,7 +68,6 @@ p, div{
 /* General styles and imports */
 html, body {
     height: 100%;
-    overflow: auto !important; /* Always allow scrolling */
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -87,6 +86,14 @@ html, body {
 .cdk-overlay-backdrop {
     background-color: transparent !important;
     pointer-events: none !important;
+}
+.cdk-global-scrollblock{
+  position: unset !important;
+
+}
+.cdk-overlay-container, .cdk-global-overlay-wrapper{
+  top: -10px !important;
+  left: -10px !important;
 }
 
 
